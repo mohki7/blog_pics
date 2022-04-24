@@ -1,0 +1,8 @@
+requests
+BeautifulSoup
+webdriver
+ChromeDriverManager
+Image
+io
+os
+streamlit
