@@ -1,5 +1,4 @@
 requests
-BeautifulSoup
 webdriver
 ChromeDriverManager
 Image
