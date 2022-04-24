@@ -1,6 +1,5 @@
 requests
 selenium
-ChromeDriverManager
 Image
 io
 os
