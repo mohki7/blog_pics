@@ -1,4 +1,5 @@
 requests
+selenium
 webdriver==3.5.3
 ChromeDriverManager
 Image
