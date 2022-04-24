@@ -1,4 +1,6 @@
 requests
-selenium
-Image
+beautifulsoup
+selenium 
+webdriver_manager
+Pillow
 streamlit

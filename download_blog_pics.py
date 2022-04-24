@@ -8,14 +8,68 @@ import io
 import os
 import streamlit as st
 
-st.title("田村保乃のブログ保存サイト")
+st.title("ブログ保存サイト")
 act = st.button("実行")
+
+num_lists = {
+        "上村 莉奈":"03",
+        "尾関 梨香":"04",
+        "小池 美波":"06",
+        "小林 由依":"07",
+        "齋藤 冬優花":"08",
+        "菅井 友香":"11",
+        "土生 瑞穂":"14",
+        "原田 葵":"15",
+        "渡邊 理佐":"21",
+        "井上 梨名":"43",
+        "遠藤 光莉":"53",
+        "大園 玲":"54",
+        "大沼 晶保":"55",
+        "幸阪 茉里乃":"56",
+        "関 有美子":"44",
+        "武元 唯衣":"45",
+        "田村 保乃":"46",
+        "藤吉夏鈴":"47",
+        "増本 綺良":"57",
+        "松田 里奈":"48",
+        "森田 ひかる":"50",
+        "守屋 麗奈":"58",
+        "山﨑 天":"51"
+}
+member = st.selectbox("メンバーを選択してください。",(
+        "上村 莉奈",
+        "尾関 梨香",
+        "小池 美波",
+        "小林 由依",
+        "齋藤 冬優花",
+        "菅井 友香",
+        "土生 瑞穂",
+        "原田 葵",
+        "渡邊 理佐",
+        "井上 梨名",
+        "遠藤 光莉",
+        "大園 玲",
+        "大沼 晶保",
+        "幸阪 茉里乃",
+        "関 有美子",
+        "武元 唯衣",
+        "田村 保乃",
+        "藤吉夏鈴",
+        "増本 綺良",
+        "松田 里奈",
+        "森田 ひかる",
+        "守屋 麗奈",
+        "山﨑 天"
+)
+                      )
+
+st.write("選択したメンバー：",member)
 if act:
         #藤吉夏鈴のブログ一覧ページに飛ぶ
         browser = webdriver.Chrome(ChromeDriverManager().install())
         #山﨑天のブログ一覧ページのurlを記載
         ##保存したい人のブログ一覧ページのアドレスに変更
-        browser.get("https://sakurazaka46.com/s/s46/diary/blog/list?ima=3416&ct=46")
+        browser.get(f"https://sakurazaka46.com/s/s46/diary/blog/list?ima=3416&ct={num_lists[member]}")
         #最新ブログのページに遷移
         go_to_new_blog = browser.find_element_by_class_name("box")
         go_to_new_blog.click()
@@ -51,3 +105,4 @@ if act:
                         img.save(f"{date}/{i}.jpg")
                         
         print("処理が終了しました。")
+        browser.close()
