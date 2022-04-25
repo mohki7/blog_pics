@@ -3,4 +3,15 @@ beautifulsoup4
 selenium 
 webdriver_manager
 Pillow
+io
+os
 streamlit
+
+#requests
+#beautifulsoup4
+#selenium import webdriver
+#from webdriver_manager.chrome import ChromeDriverManager
+#from PIL import Image
+#import io
+#import os
+#import streamlit as st
