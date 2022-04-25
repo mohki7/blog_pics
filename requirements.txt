@@ -1,8 +1,8 @@
-requests
-beautifulsoup4
-selenium 
-webdriver_manager
-Pillow
+#requests
+#beautifulsoup4
+#selenium 
+#webdriver_manager
+#Pillow
 streamlit
 
 #requests
