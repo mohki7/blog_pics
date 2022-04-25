@@ -5,7 +5,7 @@ imageio
 requests
 selenium
 webdriver_manager
-ChromeDriverManager
+#ChromeDriverManager
 Pillow
 ospath
 streamlit
